@@ -26,7 +26,7 @@ for row in dataframe1.iter_rows(1, 4):
     print("checking for keyword:", keyword)
     for col in range(3, dataframe1.max_column):
         index = row[col].value
-        if isinstance(index, str):
+        if isinstance(index, int):
             print(row[col].value)
 
 ### OUTPUT
