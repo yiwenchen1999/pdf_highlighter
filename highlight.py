@@ -7,7 +7,7 @@ unfound = {}
 def hightligh_in_page(doc, index, keyword):
     found = False
     for i in range(50):
-        page = doc[min(len(doc-1), index-25+i)]
+        page = doc[min(len(doc)-1, index-25+i)]
 
         text_instances = page.search_for(keyword)
         for inst in text_instances:
