@@ -23,7 +23,7 @@ dataframe1 = dataframe.active
 # Iterate the loop to read the cell values
 for row in dataframe1.iter_cols(1, 4):
     for col in range(3, dataframe1.max_column):
-        keyword = row[col].value
+        keyword = row[1].value
         print(type(keyword), keyword)
         print(row[col].value)
 
