@@ -3,7 +3,7 @@ import openpyxl
 
 def hightligh_in_page(doc, index, keyword):
     for i in range(50):
-        page = doc[index-25+i]
+        page = doc[max(len(doc), index-25+i)]
 
         text_instances = page.search_for(keyword)
         for inst in text_instances:
