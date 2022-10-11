@@ -22,10 +22,12 @@ dataframe1 = dataframe.active
  
 # Iterate the loop to read the cell values
 for row in dataframe1.iter_rows(1, 4):
+    keyword = row[1].value
+    print("checking for keyword:", keyword)
     for col in range(3, dataframe1.max_column):
-        keyword = row[1].value
-        print(type(keyword), keyword)
-        print(row[col].value)
+        index = row[col].value
+        if isinstance(index, str):
+            print(row[col].value)
 
 ### OUTPUT
 doc.save("output.pdf", garbage=4, deflate=True, clean=True)
